@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо та контакти</title>
+    <link rel="stylesheet" href="index.style.css">
+    <link rel="stylesheet" href="portfolio-contacts.style.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header class="header">
+            <div class="logo">
+                <img src="img/building-logo.png" alt="Логотип Майстер Буд">
+            </div>
+            <div class="header-content">
+                <h1 class="title">МАЙСТЕР БУД — наш досвід, ваш комфорт</h1>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="index.html">Головна</a></li>
+                        <li><a href="services.html">Послуги та ціни</a></li>
+                        <li><a href="portfolio-contacts.html" class="active">Портфоліо та контакти</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-contacts">
+                <span class="work-hours">Пн-Сб: 08:00 до 20:00</span>
+                <a href="tel:+380671234567" class="phone-link">+38 (067) 123-45-67</a>
+                <a href="portfolio-contacts.html#callback" class="btn-callback">Замовити дзвінок</a>
+            </div>
+        </header>
+
+        <main class="main-content container">
+            <section class="portfolio-section">
+                <h2 class="section-title">Наші реалізовані проєкти</h2>
+                <p class="section-desc">Ознайомтеся з нещодавно завершеними ремонтами квартир, будинків та комерційних просторів.</p>
+
+                <div class="gallery-grid">
+                    <article class="gallery-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/portfolio/new-england.png" alt="ЖК Нова Англія" loading="lazy">
+                            <span class="card-tag">Квартира 74 м²</span>
+                        </div>
+                        <div class="card-info">
+                            <h3>ЖК «Нова Англія», Київ</h3>
+                            <p>Капітальний ремонт під ключ у сучасному мінімалістичному стилі.</p>
+                            <span class="card-time">Термін: 2.5 місяці</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/portfolio/bathroom.jpg" alt="Ванна кімната" loading="lazy">
+                            <span class="card-tag">Санвузол 9 м²</span>
+                        </div>
+                        <div class="card-info">
+                            <h3>ЖК «Файна Таун»</h3>
+                            <p>Укладання великоформатного керамограніту, прихована підсвітка та інсталяція.</p>
+                            <span class="card-time">Термін: 3 тижні</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/portfolio/townhouse.jpg" alt="Вітальня" loading="lazy">
+                            <span class="card-tag">Таунхаус 140 м²</span>
+                        </div>
+                        <div class="card-info">
+                            <h3>Котеджне містечко, Ірпінь</h3>
+                            <p>Повний комплекс робіт: водяна тепла підлога, багаторівневі стелі та декоративна штукатурка.</p>
+                            <span class="card-time">Термін: 4 місяці</span>
+                        </div>
+                    </article>
+
+                    <article class="gallery-card">
+                        <div class="card-img-wrapper">
+                            <img src="img/portfolio/IT-hub.jpg" alt="Офісне приміщення" loading="lazy">
+                            <span class="card-tag">Офіс 210 м²</span>
+                        </div>
+                        <div class="card-info">
+                            <h3>IT-хаб «Поділ»</h3>
+                            <p>Оздоблення комерційного приміщення open-space з шумоізоляційними перегородками.</p>
+                            <span class="card-time">Термін: 1.5 місяця</span>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="contact-section" id="callback">
+                <div class="contact-grid">
+                    <div class="contact-form-box">
+                        <h3 class="contact-title">Замовити безкоштовний розрахунок</h3>
+                        <p class="form-desc">Залиште контакти, і наш інженер зателефонує вам протягом 15 хвилин для консультації або запису на замір.</p>
+
+                        <form class="lead-form" onsubmit="event.preventDefault(); alert('Дякуємо! Заявку прийнято.');">
+                            <div class="form-group">
+                                <label for="user-name">Ваше ім'я:</label>
+                                <input type="text" id="user-name" placeholder="Олександр" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user-phone">Номер телефону:</label>
+                                <input type="tel" id="user-phone" placeholder="+38 (0__) ___-__-__" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="service-type">Тип робіт:</label>
+                                <select id="service-type">
+                                    <option value="cosmetic">Косметичний ремонт</option>
+                                    <option value="capital">Капітальний ремонт</option>
+                                    <option value="turnkey">Ремонт під ключ з дизайном</option>
+                                    <option value="individual">Окремі будівельні послуги</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" class="btn-submit">Відправити заявку</button>
+                        </form>
+                    </div>
+
+                    <div class="contact-info-box">
+                        <h3 class="contact-title">Контактна інформація</h3>
+                        <ul class="contact-details-list">
+                            <li>
+                                <strong>Адреса головного офісу:</strong>
+                                <span>м. Київ, вул. Будівельників, 67, офіс 67</span>
+                            </li>
+                            <li>
+                                <strong>Прямі телефони:</strong>
+                                <span><a href="tel:+380671234567">+38 (067) 123-45-67</a></span>
+                                <span><a href="tel:+380509876543">+38 (050) 987-65-43</a></span>
+                            </li>
+                            <li>
+                                <strong>Електронна пошта:</strong>
+                                <span><a href="mailto:info@masterbud.ua">info@masterbud.ua</a></span>
+                            </li>
+                            <li>
+                                <strong>Графік роботи:</strong>
+                                <span>Пн–Сб: 08:00 – 20:00 (Виїзд замірника без вихідних)</span>
+                            </li>
+                        </ul>
+
+                        <div class="map-placeholder">
+                            <span>🗺️ Інтерактивна карта розташування офісу</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>© 2026 Всі права захищені</p>
+        </footer>
+    </div>
+</body>
+</html>

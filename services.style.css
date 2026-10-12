@@ -1,0 +1,207 @@
+/* --- Секція послуг і тарифів --- */
+.services-intro {
+  margin-bottom: 35px;
+}
+
+.services-subtitle {
+  font-size: 1.05rem;
+  color: #555555;
+  line-height: 1.5;
+  margin-top: 8px;
+}
+
+/* Комплексні тарифи (Flexbox) */
+.pricing-cards {
+  display: flex;
+  gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+
+.price-card {
+  flex: 1 1 0;
+  background: #ffffff;
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+  padding: 26px 22px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.price-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+/* Акцентна картка "Хіт замовлень" */
+.price-card.featured {
+  border: 2px solid #0056b3;
+  background-color: #fafcff;
+}
+
+.badge-popular {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background-color: #ffaa00;
+  color: #1a1a1a;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.price-header h4 {
+  margin: 0;
+  font-size: 1.35rem;
+  color: #111111;
+}
+
+.price-value {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0056b3;
+  margin: 10px 0;
+}
+
+.price-value span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #666666;
+}
+
+.price-desc {
+  font-size: 0.9rem;
+  color: #555555;
+  line-height: 1.4;
+  margin-bottom: 16px;
+  min-height: 40px;
+}
+
+.price-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1; /* вирівнює кнопки внизу на одну лінію */
+}
+
+.price-features li {
+  font-size: 0.88rem;
+  color: #333333;
+  position: relative;
+  padding-left: 20px;
+}
+
+.price-features li::before {
+  content: "✔";
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-size: 0.85rem;
+}
+
+.btn-select {
+  display: block;
+  text-align: center;
+  background-color: #e9ecef;
+  color: #212529;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-select:hover {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.btn-featured {
+  background-color: #0056b3;
+  color: #ffffff;
+}
+
+.btn-featured:hover {
+  background-color: #004085;
+}
+
+/* --- Прайс окремих робіт (CSS Grid) --- */
+.services-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 22px;
+  margin-top: 15px;
+}
+
+.service-detail-item {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.service-detail-item h4 {
+  margin: 0 0 14px 0;
+  font-size: 1.15rem;
+  color: #0056b3;
+  border-bottom: 2px solid #e2e8f0;
+  padding-bottom: 8px;
+}
+
+.service-detail-item ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.service-detail-item li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #444444;
+}
+
+.service-detail-item li strong {
+  color: #111111;
+  white-space: nowrap;
+}
+
+/* =======================================
+   Точки зламу (Адаптивність)
+   ======================================= */
+
+/* Планшети (менше 900px): пакети переходять у вертикальний список */
+@media (max-width: 900px) {
+  .pricing-cards {
+    flex-direction: column;
+  }
+
+  .price-card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* Мобільні телефони (менше 480px) */
+@media (max-width: 480px) {
+  .services-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-detail-item li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}
